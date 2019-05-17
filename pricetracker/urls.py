@@ -14,9 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path,include
+
+from django.urls import path, include
+
+from rest_framework_swagger.views import get_swagger_view
+
+app_name = 'tracker'
+schema_view = get_swagger_view(title="PriceTracker API Documentation")
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', include('tracker.urls')),
+    path('admin/', admin.site.urls),
+    path('docs/', schema_view, name='schema_view'),
+
+    path('tracker/', include('tracker.urls', namespace='tracker')),
+
 ]

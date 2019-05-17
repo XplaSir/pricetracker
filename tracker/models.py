@@ -35,4 +35,4 @@ class PriceTracker(models.Model):
     price = models.FloatField(default=0.00)
 
     def __str__(self):
-        return self.pname.pname
+        return self.pname

@@ -1,0 +1,97 @@
+{% extends "tracker/layout.html" %}
+{% load static %}
+{% block content %}
+
+<div class="jumbotron" style="background-image:url({% static 'app/img/bg1.jpg' %} ); position:center">
+    <div class="container-fluid col-md-12">
+        <div class="row ">
+            <div class="col-md-12">
+               <h4 class="text-center">Search</h4>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                <div class="col-md-4">
+
+                </div> 
+                <div class="col-md-6 ">
+                <form method="POST" action="{% url '#' %}"> 
+               
+                <div class="input-group text-center ">
+                  <input class="form-control" id="search" name="search" aria-label="Search" placeholder="search"/>
+                  <div class="input-group-append">
+                    <button class="btn  btn-primary" type="button"><i class="fa fa-search btn-outline-default"></i></button>
+                  </div>
+                </div>
+                </form>
+
+               
+            </div> 
+             <div class="col-md-4">
+
+                </div> 
+            </div>
+            
+            </div>
+          
+
+        </div>
+    </div>
+</div> <hr/>
+            <section class="">
+                <center>
+ <div class="row align-content-center">
+                <div class="col-md-6">
+                <select class="custom-select custom-select-sm">
+                  <option selected>Shops</option>
+                  <option value="1">All</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+            </div> <div class="col-md-6">
+                <select class="custom-select custom-select-sm">
+                  <option selected>Category</option>
+                  <option value="1">All</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+            </div>
+
+            </div>
+                </center>
+           
+
+            </section>
+<section>
+    <hr/>
+    <div class="container col-md-12">
+       
+        
+        <div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src="{% static 'app/img/okzim.jpg' %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="{% static 'app/img/Chopzim.jpg' %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  
+</div>
+    </div>
+</section>
+
+{% endblock %}
